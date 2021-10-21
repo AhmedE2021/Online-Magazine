@@ -1,0 +1,961 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@font-face {
+  font-family: CoreSansC-45Regular;
+  src: url(font/CoreSansC-45Regular.ttf)
+}
+@font-face {
+  font-family: CoreSansC-55Medium;
+  src: url(font/CoreSansC-55Medium.ttf);
+}
+@font-face {
+  font-family:CoreSansC-65Bold;
+  src: url(font/CoreSansC-65Bold.ttf);
+}
+@font-face {
+  font-family:CoreSansC-75ExtraBold;
+  src: url(font/CoreSansC-75ExtraBold.ttf);
+}
+@font-face {
+  font-family:CoreSansC-85Heavy;
+  src: url(font/CoreSansC-85Heavy.ttf);
+}
+@font-face {
+  font-family: CoreSansC-95Black;
+  src: url(font/CoreSansC-95Black.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  
+ 
+}
+.wrapper nav{
+  position: relative;
+  display: flex;
+  max-width: calc(100% - 200px);
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .content{
+  display: flex;
+  align-items: center;
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+}
+.content .logo a{
+  color: #d26770;
+  font-size: 30px;
+  font-weight: 600;
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: #0d0d0d;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #f5dad0;
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+  color: #0d0d0d;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 70px;
+  text-align: center;
+}
+.wrapper .menu-icon{
+  display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
+}
+
+.wrapper .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #0d0d0d;
+  background: #ffffff;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #0d0d0d;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #0d0d0d;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+  display: none;
+}
+
+/* Dropdown Menu code start */
+.content .links ul{
+  position: absolute;
+  background: #ffffff;
+  top: 80px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+/* ---------------------first section----------- */
+.mental-health-pic{
+  max-width: 100%;
+  margin-top: 100px;
+  border-radius: 1%;
+}
+
+.first-section-flexbox{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 90%;
+}
+.trending-heading{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+.article1{
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+.trending{
+  border: 1px solid #faf7f1;
+  width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    background-color: #faf7f1;
+    margin-top: 10%;
+
+}
+.trending-content{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.trending-content-text{
+  text-align: center;
+  font-size: 17px;
+  font-family:sans-serif
+}
+.trending-content-pic{
+align-items: center;
+}
+
+/*-------------------- second section---------------- */
+.second-section-header{
+text-align: center;
+padding-bottom: 35px;
+padding-top: 20px;
+}
+.second-section{
+  border: 1px solid #f5dad0;
+  width: 90%;
+  align-items: center;
+  background-color:#f5dad0 ;
+  margin: 20px auto;
+  padding-bottom: 20px;
+
+}
+.second-section-main-pic{
+  max-width: 90%;
+  align-items: center;
+  padding-left: 50px;
+  border-radius: 1%;
+
+ 
+}
+.second-section-para{
+  text-align: center;
+}
+/* ------------------third section----------------------- */
+.home-workout-pic{
+  max-width: 100%;
+  border-radius: 1%;
+}
+.third-section{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.article3{
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.third-section-content{
+  border: 1px solid #f5dad0;
+  width: 100%;
+  align-items: center;
+  background-color: #faf7f1;
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+.third-section-header{
+  text-align: center;
+  padding-top: 30px ;
+  padding-bottom: 30px;
+}
+.third-section-links{
+  text-align: center;
+
+}
+
+
+/*-------------------- fourth section---------------- */
+
+.fourth-section-header{
+  text-align: center;
+  padding-bottom: 35px;
+  padding-top: 20px;
+  }
+  .fourth-section{
+    width: 90%;
+    align-items: center;
+    margin: 20px auto;
+    padding-bottom: 20px;
+  
+  }
+  .fourth-section-main-pic{
+    max-width: 100%;
+    align-items: center;
+    border-radius: 1%;
+  
+  
+   
+  }
+  .fourth-section-para{
+    text-align: center;
+  }
+
+/*-------------------- fifth section---------------- */
+
+ .fifth-section{
+  text-align: center;
+  padding-bottom: 35px;
+  padding-top: 20px;
+ 
+  }
+ .border-line-top{
+  border-top: 1px solid #f5dad0;
+ }
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  margin-top: 20px;
+}
+.product{
+  width: 150px;   
+   display: flex;                
+  flex-direction: column;       
+  border: 1px solid white;    
+  border-radius: 4px;           
+  overflow: hidden;             
+  margin: 5px;  
+}
+.promo{
+color:#ffffff;
+border-radius: 4px;
+background-color: #f5dad0;
+border: 1px solid #f5dad0
+}
+.findout{
+  color: coral;
+}
+.last-product{
+  display: none;
+}
+.Product-header-font{
+  font-family:CoreSansC-55Medium;
+font-weight: 700;
+line-height: 1.3;
+}
+.product-promo-font{
+  font-family: CoreSansC-45Regular;
+  line-height: 1.3;
+  font-weight: 700;
+
+}
+.product-dtls-font{
+  font-family: CoreSansC-45Regular;
+  line-height: 1.3;
+  font-weight: 400;
+}
+.space-between-para{
+  margin-bottom: 10px;
+}
+
+
+
+/* ----------------------footer------------------ */
+.some-image{
+  width: 32px;
+  margin-right: 16px;
+  margin-top: 16px;
+
+}
+
+.learn-follow{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 3px;
+  margin-top: 5px;
+  background-color: #f5dad0;
+  border: 1px bold gray ;
+}
+.learn-more-header ,.follow-us-header{
+  text-align: center;
+  
+}
+.learn-more-element{
+  margin-top: 10px; 
+  text-align: center;
+  font-family: CoreSansC-45Regular;
+  
+}
+
+.footer-line{
+  border-top: 1px solid black;
+  font-weight: 400;
+  margin: 2rem auto;
+  width: 15rem;
+}
+.privacy{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 25px 10px 25px;
+  
+}
+
+
+/* ------short nav for pages and pics & fonts------- */
+.short-nav{
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.article-page-pic{
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.font-style-95{
+font-family:CoreSansC-95Black;
+font-weight: 400;
+color: #0d0d0d;
+line-height: 1.4;
+}
+.font-style-85{
+font-family:CoreSansC-85Heavy;
+font-weight: 400;
+color: #0d0d0d;
+line-height: 1.4;
+}
+.font-style-75{
+font-family:CoreSansC-75ExtraBold;
+font-weight: 500;
+color: #0d0d0d;
+line-height: 1.4;
+
+}
+.font-style-65{
+  font-family:CoreSansC-65bold;
+  font-weight: 500;
+  color: #0d0d0d;
+  line-height: 1.4;
+}
+.font-style-55{
+  font-family:CoreSansC-55Medium;
+  font-weight: 500;
+  color: #0d0d0d;
+  line-height: 1.4;
+}
+.font-style-45{
+font-family: CoreSansC-45Regular;
+font-weight: 500;
+color: #0d0d0d;
+line-height: 1.4;
+}
+
+
+
+
+
+
+a.under-line:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------Homeworkouts page------------------------ */
+.third-section-video{
+  align-items: right;
+  width: 90%;
+  margin-bottom:20px ;
+ margin-right: -5rem;
+ 
+  
+}
+.third-section-video-header{
+  text-align: center;
+  margin-top: 40px;
+}
+.horizontal-line{
+  border-top: 1px solid grey;
+  font-weight: 400;
+  margin: 1.7rem auto;
+  width: 100%;
+}
+.workouts-para-header{
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+/* ---------------------------Mental Health page------------------------------- */
+
+
+
+
+
+
+
+
+
+/*---------------------------- healthy eating page -----------------------------*/
+.pic-tag{
+  margin-top: 25px;
+}
+.eating-article-page-pic{
+  border-radius: 10%;
+}
+.apple-pic{
+border-radius: 10%;
+}
+.healthy-living-pic{
+border-radius: 10%;
+}
+/*---------------------------- Home workouts page -----------------------------*/
+.work-article-page-pic{
+  border-radius: 2%;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.video-player{
+  align-items: center;
+}
+
+
+
+/* Responsive code start */
+@media screen and (max-width: 1250px){
+  .wrapper nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .wrapper .search-box input{
+    padding: 0 100px 0 15px;
+  }
+  
+
+}
+
+
+@media screen and (max-width: 700px){
+  .wrapper .menu-icon{
+    display: block;
+  }
+  .wrapper #show-menu:checked ~ .menu-icon i::before{
+    content: "\f00d";
+  }
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #ffffff;;
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .content .links #show-dietandnutrion:checked ~ ul,
+  .content .links #show-fitness:checked ~ ul,
+  .content .links #show-mindandbody:checked ~ ul,
+  .content .links #show-lifestyle:checked ~ ul,
+  .content .links #show-facts:checked ~ ul{
+    max-height: 100vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+  .eating-article-page-vertical-pic{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .wrapper nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 27px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .wrapper .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .wrapper .search-box input{
+    padding-right: 30px;
+  }
+  
+}
+
+/* -----------------large screen ------------------------*/
+@media screen and (min-width: 700px){
+  
+  
+  .article1{
+    max-width: 69%;
+  }
+  .trending{
+    max-width: 25%;
+   flex: 25%;
+    margin-top: 20px;
+
+  }
+  .second-section{
+    display: flex;
+    flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  }
+  .second-section-right{
+   max-width: 70%;
+   float: right;
+  }
+  .second-section-para{
+    max-width: 30%;
+  }
+  .third-section{
+     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .article3{
+    max-width: 55%;
+    flex: 70%;
+   margin-top: 10px;
+  }
+
+  .third-section-content{
+    max-width: 45%;
+   flex: 30%;
+  margin-top: 10px;
+  
+  }
+  .article3-text{
+  max-width: 75%;
+}
+  
+
+.fourth-section{
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+border: 1px solid #f5dad0;
+
+}
+.fourth-section-right{
+ max-width: 70%;
+ float: right;
+ padding-right: 30px;
+}
+.fourth-section-para{
+  max-width: 45%;
+  padding-left: 30px;
+}
+.third-section-video-player{
+  width: 90%;
+}
+.border-line-top{
+border-top: none;
+}
+.product{
+  margin: 20px;
+}
+.last-product{
+  display: flex;
+}
+.learn-follow{
+  flex-direction: row;
+}
+.footer-line{
+  display: none;
+}
+.follow-us{
+  float: right;
+  max-width: 50%;
+}
+.learn-more-elements{
+  display: flex; 
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.learn-more-elements1{
+  max-width: 50%;
+ margin-left: -10%
+}
+.learn-more-elements2{
+  margin-right: -10%;
+  max-width:50% ;
+}
+.privacy{
+  margin-right: 30%;
+  margin-left: 30%;
+}
+/* ---------------------------Mental Health page------------------------------- */
+.mental-article1{
+display: flex;
+justify-content: space-between;
+flex-direction: row-reverse;
+flex-wrap: wrap;
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+.mental-font-large{
+  font-size: 3rem;
+
+}
+.mental-article1-pic{
+max-width: 50%;
+border-radius: 2%;
+}
+.mental-article1-pic-1{
+  height: 14rem;
+  width: ;
+}
+.meditation-pic{
+  width: 42rem;
+}
+.mental-article2-text{
+max-width: 50%;
+
+float: left;
+}
+.mental-article1-text{
+  max-width: 40%;
+
+  float: left;
+}
+.mental-article-1-top{
+margin-bottom: -.2rem;
+}
+
+.mental-article2{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+  margin-bottom: 10px;
+}
+.mental-article2-pic{
+  max-width: 40%;
+  border-radius: 2%;
+}
+/*---------------------------- healthy eating page -----------------------------*/
+
+.eating-article{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+ 
+}
+.eating-article-page-vertical-pic{
+height: 100%;
+max-width: 95%;
+flex: 40%;
+border-radius: 1%;
+}
+.eating-article-page{
+ max-width: 50%;
+}
+.pic-tag{
+  margin-top: 20px;
+  margin-bottom: 20px;
+text-align: center;
+}
+.apple-pic{
+  height: 20rem;
+  width: 25rem;
+  float: right;
+justify-content: space-around;
+border-radius: 100%;
+}
+.healthy-living-pic{
+  height: 20rem;
+  width: 25rem;
+  float: right;
+  justify-content: space-around;
+  border-radius: 100%;
+}
+.eating-header{
+  font-size: 2.5rem;
+}
+
+
+.eating-article-page-pic{display: none;
+}
+
+/*---------------------------- Home workouts page -----------------------------*/
+.workout-heading-article{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    width: 100%;
+  
+}
+
+.home-workout-main-pic{
+flex: 50%;
+float: right;
+}
+.home-workout-main-header{
+flex: 50%;
+max-width: 50%;
+font-size: 4.8rem;
+margin-bottom: -25rem;
+font-family:CoreSansC-65Bold;
+}
+
+.get-in-shape-in-this-article{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   flex-direction: row-reverse;
+ 
+    width: 100%;
+    
+  }
+.in-this-article{
+ max-width: 50%;
+text-align: center;
+
+}
+.horizontal-line{
+ width: 38.5rem;
+}
+.article-layout{
+max-width: 45%;
+
+}
+.the5elements-header{
+  margin-left: 18px;
+}
+.article-layout-5elements{
+  max-width: 100%;
+  margin-left: 18px;
+}
+.article-layout-2{
+ float: left;
+}
+.article-layout3{
+  max-width: 45%;
+  margin-left: 18px;
+}
+.work-article-page-pic{
+  border-radius: 2%;
+  
+}
+.paragraph-pic{
+
+ max-width: 48%;
+}
+.getting-started-article{
+
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+     flex-direction: row;
+  
+      width: 100%;
+}
+.third-section-video{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+
+}
+.video-header{
+  flex: 50%;
+  max-width: 50%;
+  font-size: 2rem;
+  margin-bottom: -25rem;
+  font-family:CoreSansC-65Bold;
+}
+.video-player{
+  flex: 50%;
+  float: right; 
+}
+
+}
+
+
+
+ 
+  
+  
